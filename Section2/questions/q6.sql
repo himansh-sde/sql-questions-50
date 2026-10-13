@@ -25,4 +25,4 @@ LEFT JOIN employee_uuids eu ON e.id = eu.employee_id;
 --    A WHERE on the right table rejects NULL-extended rows (NULL > x = NULL) and drops unmatched rows.
 --  * Indexing: primary keys are auto-indexed; FOREIGN-KEY columns are NOT. Index the child join col:
 --      CREATE INDEX idx_emp_uuids_emp_id ON employee_uuids (employee_id);
---    Enables efficient nested-loop / merge joins at scale; a classic missing-index cause of slow joins.
+--    Enables efficient nested-loop / merge joins at scale; a classic missing-index cause of slow joins. 
