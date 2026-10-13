@@ -28,4 +28,4 @@ WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id);
 --    short-circuits at the first match. LEFT JOIN..IS NULL often plans identically.
 --  * Test the PK for NULL (o.id) — it's NULL ONLY when the join missed. Avoid testing nullable cols.
 --  * Index orders(customer_id) to make the existence check fast at scale:
---      CREATE INDEX idx_orders_customer_id ON orders (customer_id);
+--      CREATE INDEX idx_orders_customer_id ON orders (customer_id); 
