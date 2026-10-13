@@ -13,7 +13,7 @@ Each entry: task -> my answer -> verdict -> senior-DE notes -> reference query -
 
 **My answer**
 ```sql
-SELECT e.name, eu.uuid FROM employees e LEFT JOIN employee_uuids eu ON e.id = eu.employee_id;
+SELECT e.name, eu.uuid FROM employees e LEFT JOIN employee_uuids eu ON e.id = eu.employee_id; 
 ```
 
 **Verdict:** Correct and optimal. All 1001 employees (100 with NULL uuid). INNER JOIN would return
