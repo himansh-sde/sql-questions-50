@@ -28,4 +28,4 @@ JOIN products p ON o.product_id = p.id;
 --  * INNER JOIN is correct because every order references a real product (mandatory FK).
 --    If integrity were in doubt: LEFT JOIN + WHERE p.id IS NULL surfaces orphan orders.
 --  * Join uses products.id (PK, indexed) from orders.product_id (FK, not auto-indexed);
---    with 60 products Postgres hashes the small table and seq-scans orders -> optimal.
+--    with 60 products Postgres hashes the small table and seq-scans orders -> optimal. 
