@@ -20,7 +20,7 @@ WHERE today.revenue > yday.revenue;
 -- Window-function alternative (faster at scale; REQUIRES the gap guard):
 -- SELECT day FROM (
 --   SELECT day, revenue,
---          LAG(revenue) OVER (ORDER BY day) AS prev_rev,
+--          LAG(revenue) OVER (ORDER BY day) AS prev_rev, 
 --          LAG(day)     OVER (ORDER BY day) AS prev_day
 --   FROM daily_sales) t
 -- WHERE revenue > prev_rev AND prev_day = day - 1;
