@@ -15,14 +15,6 @@ TABLES:
 - bonuses   (employee_id, amount)
 */
 
--- ----------------------------------------------------------------------------
--- 1. CANDIDATE SUBMISSION (Flawed):
--- ----------------------------------------------------------------------------
--- SELECT DISTINCT(e.name), b.amount 
--- FROM employees e 
--- LEFT JOIN bonuses b 
---   ON e.id = b.employee_id AND b.amount < 1000;
---
 -- SENIOR DE NOTES ON SUBMISSION:
 -- 1. [CRITICAL BUG] ON vs WHERE Placement:
 --    - In a LEFT JOIN, right-table filters inside ON determine *which rows match*.
